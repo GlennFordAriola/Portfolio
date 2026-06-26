@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <img class="image-gradient" src="../images/gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <div id="header-placeholder"></div>
+
+        <main class="main">
+            <div data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80"
+                class="content">
+                <h1>Food Ecommerce Frontend</h1>
+                <p class="description">
+                    A fully responsive food ecommerce frontend! <br>
+                    LINK:
+                    <a class="link-project" href="/ShopProject/ecommerce.html" target="_blank">Check this project</a>
+                </p>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80"
+                data-aos-delay="150" class="content-2">
+                <img class="ecommerce-image" src="/images/ecommerce.jpg" alt="">
+            </div>
+        </main>
+
+        <br>
+
+        <main class="main">
+            <div data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80"
+                class="content">
+                <h1>Soon Projects</h1>
+                <p class="description">
+                    Building more projects soon! <br>
+                    <a class="link-project" href=""></a>
+                </p>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-offset="80"
+                data-aos-delay="150" class="content-2">
+                <img class="homepage-image" src="" alt="">
+            </div>
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        fetch('../header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                AOS.init({
+                    once: true,
+                    mirror: false,
+                });
+            });
+    </script>
+</body>
+
+</html>

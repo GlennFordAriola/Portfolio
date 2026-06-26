@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <img class="image-gradient" src="../images/gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <div id="header-placeholder"></div>
+
+        <main>
+
+            <section class="about-hero" data-aos="fade-up" data-aos-duration="1000">
+                <div class="about-hero-text">
+                    <span class="eyebrow">About Me</span>
+                    <h1>Building things<br>for the <span class="highlight">web.</span></h1>
+                    <p class="about-lead">I'm Glenn, a frontend developer who loves turning ideas into clean,
+                        interactive experiences. I build with HTML, CSS, and JavaScript, and I'm always learning
+                        something new.</p>
+                </div>
+                <div class="about-hero-image" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="avatar-frame">
+                        <img src="../images/profile.png" alt="Glenn">
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills-section" data-aos="fade-up" data-aos-duration="1000">
+                <span class="eyebrow">What I Work With</span>
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+                        <span class="skill-icon">🌐</span>
+                        <h3>Frontend</h3>
+                        <p>HTML/HTML5, CSS, JavaScript, the fundamentals, done right.</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                        <span class="skill-icon">🎮</span>
+                        <h3>Game Dev</h3>
+                        <p>Roblox (Lua) and slight C# from Unity, building games and interactive worlds.</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                        <span class="skill-icon">🛠️</span>
+                        <h3>Tools</h3>
+                        <p>VS Code and Git, and always picking up more.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-section" data-aos="fade-up" data-aos-duration="1000">
+                <span class="eyebrow">My Story</span>
+                <div class="story-grid">
+                    <div class="story-block">
+                        <div class="story-year">Now</div>
+                        <p>Building my portfolio and working on real frontend projects — from ecommerce sites to
+                            interactive UIs.</p>
+                    </div>
+                    <div class="story-block">
+                        <div class="story-year">Earlier</div>
+                        <p>Started exploring web development and game development side by side, learning by building and
+                            shipping projects.</p>
+                    </div>
+                    <div class="story-block">
+                        <div class="story-year">Always</div>
+                        <p>Driven by curiosity, if I can imagine it, I want to build it.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        fetch('../header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                AOS.init();
+            });
+    </script>
+</body>
+
+</html>

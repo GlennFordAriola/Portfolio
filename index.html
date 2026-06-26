@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <img class="image-gradient" src="images/gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <div id="header-placeholder"></div>
+
+        <main>
+            <div class="content">
+                <h3 data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out-cubic" data-aos-delay="100">
+                    HELLO, I AM</h3>
+
+                <h1 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="250">
+                    GLENN FORD <br>ARIOLA</h1>
+
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400"
+                    class="description">
+                    Aspiring Frontend Developer focused on creating clean, responsive, and user-friendly websites.
+                </p>
+
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="550"
+                    class="buttons">
+                    <a href="portfoliopage/portfolio.html" class="btn-get-started">Sample Works &gt;</a>
+                    <a href="about/about.html" class="btn-signing-main">About me &gt;</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <img data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-out-cubic" data-aos-delay="300"
+        class="profile-image" src="images/profile.png" alt="My profile picture">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        fetch('/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                AOS.init({
+                    once: true,
+                    mirror: false,
+                });
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <img class="image-gradient" src="../images/gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <div id="header-placeholder"></div>
+
+
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            fetch('../header.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    AOS.init();
+                });
+        </script>
+</body>
+
+</html>
